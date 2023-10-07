@@ -1,0 +1,56 @@
+erdiagram Model
+
+notation=default
+
+entity SpaceBody {
+  id key
+  name: string
+  diameter: double
+  mass: double
+  atmosphere: string
+  average_temperature: double
+  geography: string
+  history_and_exploration: string
+  // spacecraft_and_infrastructure: string
+	distance_from_earth: double
+	travel_duration: string
+  // tourist_attractions_and_activities: {
+  //   tourist_sites: {
+  //     name: string
+  //     description: string
+  //     recommended_duration: string
+  //   }[]
+  // }
+  safety_and_health_information: string
+  cultural_and_scientific_significance: string
+	images_and_visuals: json
+  // images_and_visuals: {
+  //   image_urls: string[]
+  //   maps: string[]
+  // }
+  local_time_and_time_zone: string
+  language_and_communication: string
+  local_cuisine_and_dining: string
+  transportation_within_the_planet: string
+  visa_and_entry_requirements: string
+  emergency_contacts_and_services: string
+  fun_facts_and_trivia: string
+}
+
+entity TouristAttractionsAndActivities {
+	id key
+	name: string
+	description: string
+	recommended_duration: string
+}
+
+relationship SpacebodyAttractions {
+	SpaceBody[1] -> TouristAttractionsAndActivities[N ]
+}
+
+entity Itinerary {
+   id key
+}
+relationship Rel {
+   SpaceBody -> Itinerary
+}
