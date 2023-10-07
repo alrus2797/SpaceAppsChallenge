@@ -1,0 +1,54 @@
+{
+  "travel_itinerary": {
+    "journey_segments": [
+      {
+        "departure_planet": "Earth",
+        "arrival_planet": "Moon",
+        "travel_details": {
+          "departure_date": "2023-11-01",
+          "arrival_date": "2023-11-02",
+          "duration": "1 day"
+        },
+        "tourist_sites": [
+          {
+            "name": "Moon Base Alpha",
+            "description": "A lunar research station",
+            "recommended_duration": "3 nights"
+          }
+        ]
+      },
+      {
+        "departure_planet": "Moon",
+        "arrival_planet": "Mars",
+        "travel_details": {
+          "departure_date": "2023-11-03",
+          "arrival_date": "2023-11-10",
+          "duration": "7 days"
+        },
+        "tourist_sites": [
+          {
+            "name": "Mars Base Alpha",
+            "description": "The first human settlement on Mars",
+            "recommended_duration": "5 days"
+          }
+        ]
+      },
+      {
+        "departure_planet": "Mars",
+        "arrival_planet": "Jupiter",
+        "travel_details": {
+          "departure_date": "2023-11-12",
+          "arrival_date": "2023-11-30",
+          "duration": "18 days"
+        },
+        "tourist_sites": [
+          {
+            "name": "Jupiter's Great Red Spot",
+            "description": "A massive storm on Jupiter",
+            "recommended_duration": "7 days"
+          }
+        ]
+      }
+    ]
+  }
+}
