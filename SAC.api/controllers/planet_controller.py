@@ -30,7 +30,7 @@ async def create_item(item: PlanetIn):
 async def get_items(skip: int = 0, limit: int = 10):
     try:
         items_collection = db.collection(entity_name)
-        items: List[PlanetOut] = await items_collection.limit(limit).offset(skip).stream()
+        items: List[PlanetOut] = await items_collection.limit(limit).offset(skip).get()
         item_list = [PlanetOut(**item.to_dict(), id=item.id) for item in items]
 
         return item_list

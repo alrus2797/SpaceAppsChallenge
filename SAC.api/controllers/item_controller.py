@@ -28,7 +28,7 @@ async def create_item(item: Item):
 async def get_items(skip: int = 0, limit: int = 10):
     try:
         items_collection = db.collection('items')
-        items: List[Item] = await items_collection.limit(limit).offset(skip).stream()
+        items: List[Item] = await items_collection.limit(limit).offset(skip).get()
         item_list = [Item(**item.to_dict(), id=item.id) for item in items]
 
         return item_list
